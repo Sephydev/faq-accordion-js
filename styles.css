@@ -1,3 +1,8 @@
+@font-face {
+    font-family: WorkSans;
+    src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -11,10 +16,22 @@ body {
     background-image: url('./assets/img/background-pattern-mobile.svg');
     background-repeat: no-repeat;
     background-color: hsl(275, 100%, 97%);
+    font-family: WorkSans, sans-serif;
 }
 
 .card {
     background-color: hsl(0, 0%, 100%);
     width: 20rem;
-    padding: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header img {
+    width: 1.5rem;
 }
