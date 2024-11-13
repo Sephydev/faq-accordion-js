@@ -1,6 +1,6 @@
-const btnQuestion = document.getElementsByClassName("question");
+const questionHeader = document.getElementsByClassName("question-header");
 
-Array.prototype.forEach.call(btnQuestion, (item) => {
+Array.prototype.forEach.call(questionHeader, (item) => {
     item.addEventListener("click", function(e) {
         const answers = document.getElementsByClassName("answer");
         const questionImg = document.getElementsByClassName("question-img");

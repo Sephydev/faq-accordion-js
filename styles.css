@@ -80,6 +80,7 @@ a {
     color: hsl(292, 16%, 49%);
 }
 
-h2:hover {
+.question-header:hover {
     color: purple;
+    cursor: pointer;
 }
