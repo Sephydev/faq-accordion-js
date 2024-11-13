@@ -1,18 +1,19 @@
-const btnQuestion = document.getElementById("question");
-let isHidden = true;
+const btnQuestion = document.getElementsByClassName("question");
 
-btnQuestion.addEventListener("click", function(e) {
-    const answer = document.getElementById("answer");
-    const questionImg = document.getElementById("question-img");
+Array.prototype.forEach.call(btnQuestion, (item) => {
+    item.addEventListener("click", function(e) {
+        const answers = document.getElementsByClassName("answer");
+        const questionImg = document.getElementsByClassName("question-img");
 
-    if (isHidden) {
-        answer.classList.remove("hidden");
-        questionImg.src = "./assets/img/icon-minus.svg";
-        isHidden = false;
-    } else {
-        answer.classList.add("hidden");
-        questionImg.src = "./assets/img/icon-plus.svg";
-        isHidden = true;
-    }
+        let id = item.id;
+        let isHidden = answers[id].classList.contains("hidden")
+
+        if (isHidden) {
+            answers[id].classList.remove("hidden")
+            questionImg[id].src = "./assets/img/icon-minus.svg"
+        } else {
+            answers[id].classList.add("hidden")
+            questionImg[id].src = "./assets/img/icon-plus.svg"
+        }
+    })
 })
-    

@@ -37,7 +37,7 @@ header img {
 }
 
 section {
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 
 h2 {
@@ -77,4 +77,5 @@ button {
 hr {
     border: none;
     border-bottom: 1px solid hsl(275, 100%, 97%);
+    margin-top: 1.25rem;
 }
