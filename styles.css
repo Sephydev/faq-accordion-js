@@ -36,9 +36,6 @@ header img {
     width: 1.5rem;
 }
 
-section {
-    margin-top: 1.25rem;
-}
 
 h2 {
     font-size: 1.05rem;
@@ -53,13 +50,13 @@ button {
 
 .question-header {
     display: flex;
-    margin-bottom: 1.25rem;
+    margin: 1.25rem 0;
     align-items: center;
     justify-content: space-between;
 }
 
 .answer {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     color: hsl(292, 16%, 49%);
     font-size: 14px;
     line-height: 1.35rem;
@@ -77,5 +74,4 @@ button {
 hr {
     border: none;
     border-bottom: 1px solid hsl(275, 100%, 97%);
-    margin-top: 1.25rem;
 }
