@@ -1,5 +1,5 @@
 const btnQuestion = document.getElementById("question");
-let isHidden = false;
+let isHidden = true;
 
 btnQuestion.addEventListener("click", function(e) {
     const answer = document.getElementById("answer");
