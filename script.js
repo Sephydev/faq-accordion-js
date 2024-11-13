@@ -7,7 +7,7 @@ Array.prototype.forEach.call(questionHeader, (item) => {
 
         let id = item.id;
         let isHidden = answers[id].classList.contains("hidden")
-
+        
         if (isHidden) {
             answers[id].classList.remove("hidden")
             questionImg[id].src = "./assets/img/icon-minus.svg"
