@@ -11,9 +11,11 @@ Array.prototype.forEach.call(questionHeader, (item) => {
         if (isHidden) {
             answers[id].classList.remove("hidden")
             questionImg[id].src = "./assets/img/icon-minus.svg"
+            questionImg[id].alt = "A minus"
         } else {
             answers[id].classList.add("hidden")
             questionImg[id].src = "./assets/img/icon-plus.svg"
+            questionImg[id].alt = "A plus"
         }
     })
 })
