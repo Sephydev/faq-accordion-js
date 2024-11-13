@@ -79,3 +79,7 @@ hr {
 a {
     color: hsl(292, 16%, 49%);
 }
+
+h2:hover {
+    color: purple;
+}
