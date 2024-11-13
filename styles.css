@@ -44,3 +44,13 @@ h2 {
     font-size: 1.05rem;
     font-weight: 600;
 }
+
+button {
+    padding: 0;
+    border: none;
+    background-color: inherit;
+}
+
+.question-header {
+    display: flex;
+}
