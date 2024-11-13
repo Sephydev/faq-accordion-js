@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution](https://github.com/Sephydev/faq-accordion-js)
+- [Live Site](https://sephydev.github.io/faq-accordion-js/)
 
 ## My process
 
@@ -43,63 +43,61 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript Vanilla
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+In this project, I mainly learn how to do animation with CSS, and how to make the question interactive with the help of JavaScript.
+It was really complicated for the animation because it was the first time I'm doing that. I wanted to do a "slide-down/slide-up" effect on the answers depending of if it appears or disappear.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.hidden {
+  transition: all 0.5s ease-in-out;
+  max-height: 0;
+  margin-bottom: 0;
 }
 ```
 
+For JavaScript, I managed to make sure I worked on it once and didn't have to touch it again. It was also complicated but I'm proud of it. My objective was to get all button, all answers and all image, and depending of the id of the button, it change the corresponding answers and images. Thanks to that, I did not have to do one eventListener for each question.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+const questionHeader = document.getElementsByClassName("question-header");
+
+Array.prototype.forEach.call(questionHeader, (item) => {
+  item.addEventListener("click", function (e) {
+    const answers = document.getElementsByClassName("answer");
+    const questionImg = document.getElementsByClassName("question-img");
+
+    let id = item.id;
+    let isHidden = answers[id].classList.contains("hidden");
+
+    if (isHidden) {
+      answers[id].classList.remove("hidden");
+      questionImg[id].src = "./assets/img/icon-minus.svg";
+    } else {
+      answers[id].classList.add("hidden");
+      questionImg[id].src = "./assets/img/icon-plus.svg";
+    }
+  });
+});
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Seeing how it was difficult for me to use CSS animation and JavaScript, I will train more on those domain. Animation make the project really beautiful, and Javascript make it "living", so it will be very interesting if I master those subject.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [FJolt Article](https://fjolt.com/article/javascript-multiple-elements-addeventlistener) - This article helped me to put in place my JavaScript. It explain very well how to use addEventListener on multiple elements like an HTMLCollection.
+- [MDN Article on transition property](https://developer.mozilla.org/fr/docs/Web/CSS/transition) - This article helped me understand how the transition property work.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@Sephydev](https://www.frontendmentor.io/profile/Sephydev)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Thanks to FJolt team for the creation of an article explaining how to use addEventListener on multiple elements. This unlocked me in my progression during this project.
+Thanks to MDN team for creating so many useful article. Those helped me a lot during my learning journey, and keep helping me today !
+Thanks to Frontend Mentor for the challenges they make available. Thanks to them, I am learning a lot while having fun reproducing beautiful and interesting design!
