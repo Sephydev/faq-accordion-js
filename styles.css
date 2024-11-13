@@ -53,13 +53,13 @@ button {
 
 .question-header {
     display: flex;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     align-items: center;
     justify-content: space-between;
 }
 
 .answer {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     color: hsl(292, 16%, 49%);
     font-size: 14px;
     line-height: 1.35rem;
