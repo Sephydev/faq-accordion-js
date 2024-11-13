@@ -75,3 +75,7 @@ hr {
     border: none;
     border-bottom: 1px solid hsl(275, 100%, 97%);
 }
+
+a {
+    color: hsl(292, 16%, 49%);
+}
