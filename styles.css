@@ -35,3 +35,12 @@ header {
 header img {
     width: 1.5rem;
 }
+
+section {
+    margin-top: 1.5rem;
+}
+
+h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
